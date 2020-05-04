@@ -22,7 +22,7 @@ function editSiteSettings($siteTitle, $contactEmail, $topBarTheme, $sideBarTheme
 	$sideBarTheme = mysqli_real_escape_string($conn, $sideBarTheme);
 	$version = mysqli_real_escape_string($conn, $version);
 	$filePath = mysqli_real_escape_string($conn, $filePath);
-//	$additionalInput = mysqli_real_escape_string($conn, $siteTitle); - Should always be escaped
+//	$additionalInput = mysqli_real_escape_string($conn, $additionalInput); - Should always be escaped
 	$sql = "UPDATE settings 
 				SET 
 					siteTitle = '$siteTitle',
