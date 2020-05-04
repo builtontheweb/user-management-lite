@@ -5,7 +5,7 @@
 				<div class="card-body p-5 text-center">
 					<div class="h3 font-weight-light mb-3">Sign In</div>
 					
-						<?php $this->renderFeedbackMessages(); ?>
+						
 				</div>
 				<hr class="my-0"/>
 				<div class="card-body p-5">
