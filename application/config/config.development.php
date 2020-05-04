@@ -97,7 +97,7 @@ return array(
     'COOKIE_RUNTIME' => 1209600,
     'COOKIE_PATH' => '/',
     'COOKIE_DOMAIN' => "",
-    'COOKIE_SECURE' => false,
+    'COOKIE_SECURE' => true,
     'COOKIE_HTTP' => true,
     'SESSION_RUNTIME' => 604800,
     /**
@@ -107,7 +107,7 @@ return array(
      * AVATAR_SIZE set the pixel size of avatars/gravatars (will be 44x44 by default). Avatars are always squares.
      * AVATAR_DEFAULT_IMAGE is the default image in public/avatars/
      */
-    'USE_GRAVATAR' => false,
+    'USE_GRAVATAR' => true,
     'GRAVATAR_DEFAULT_IMAGESET' => 'mm',
     'GRAVATAR_RATING' => 'pg',
     'AVATAR_SIZE' => 44,
@@ -136,8 +136,8 @@ return array(
     'EMAIL_USE_SMTP' => true,
     'EMAIL_SMTP_HOST' => 'ssl://smtp.gmail.com',
     'EMAIL_SMTP_AUTH' => true,
-    'EMAIL_SMTP_USERNAME' => 'info@builtontheweb.co.uk',
-    'EMAIL_SMTP_PASSWORD' => 'Dest!n123',
+    'EMAIL_SMTP_USERNAME' => 'youremail',
+    'EMAIL_SMTP_PASSWORD' => 'yourpassword',
     'EMAIL_SMTP_PORT' => 465,
     'EMAIL_SMTP_ENCRYPTION' => 'ssl',
     /**
