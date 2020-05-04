@@ -41,19 +41,6 @@
 									</div>
 								</div>
 							</div>
-							<div class = 'form-row'>
-								<div class="col-md-12 mx-auto">
-									<center><img id="captcha" src="<?php echo Config::get('URL'); ?>register/showCaptcha"/></center>
-									<a href="#" style="display: block; font-size: 11px; margin: 5px 0 15px 0; text-align: center"
-               						onclick="document.getElementById('captcha').src = '<?php echo Config::get('URL'); ?>register/showCaptcha?' + Math.random(); return false">Reload Captcha</a>
-								</div>
-							</div>
-							<div class = 'form-row'>
-								<div class="col-md-12">
-									<div class="form-group"><label class="text-gray-600 small" for="firstNameExample">Captcha</label><input class="form-control form-control-solid py-4" type="text" placeholder="" aria-label="First Name" aria-describedby="firstNameExample"  name='captcha' required/>
-									</div>
-								</div>
-							</div>
 							<div class="form-group d-flex align-items-center justify-content-between">
 								<div class="custom-control custom-control-solid custom-checkbox">
 									<input class="custom-control-input small" id="customCheck1" type="checkbox"/><label class="custom-control-label mr-3" for="customCheck1">I accept the <a href="javascript:void(0);">terms &amp; conditions</a>.</label>

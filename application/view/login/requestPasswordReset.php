@@ -16,16 +16,6 @@
 							<div class="form-group"><label class="text-gray-600 small" for="emailExample">Email address</label>
 								<input class="form-control form-control-solid py-4" type="text" placeholder="" aria-label="Email Address" aria-describedby="emailExample" name="user_name_or_email" required/>
 							</div>
-							<div class="form-group text-center mt-3">
-								<!-- show the captcha by calling the login/showCaptcha-method in the src attribute of the img tag -->
-								<center><img id="captcha" src="<?php echo Config::get('URL'); ?>register/showCaptcha"/>
-								</center>
-								<a href="#" style="display: block; font-size: 11px; margin: 5px 0 15px 0;" onclick="document.getElementById('captcha').src = '<?php echo Config::get('URL'); ?>register/showCaptcha?' + Math.random(); return false">Reload Captcha</a>
-							</div>
-							<div class="form-group">
-								<label class="text-gray-600 small" for="emailExample">Captcha</label>
-								<input class="form-control form-control-solid py-4" type="text" placeholder="" aria-label="Email Address" aria-describedby="emailExample" name="captcha"/>
-							</div>
 							<div class="form-group mb-0">
 								<input type="submit" class="btn btn-primary btn-block" value="Send reset link"/>
 							</div>
