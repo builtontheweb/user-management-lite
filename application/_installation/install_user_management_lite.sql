@@ -45,9 +45,10 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `topBarTheme` varchar(55) NOT NULL DEFAULT 'bg-white navbar-dark',
   `sideBarTheme` varchar(55) NOT NULL DEFAULT 'sidenav-dark',
   `VERSION` varchar(15) NOT NULL,
+  `filePath` varchar(255) NOT NULL
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-INSERT INTO `settings` (`id`, `siteTitle`, `contactEmail`, `topBarTheme`, `sideBarTheme`, `VERSION`) VALUES
-(1, 'User management LITE', 'info@emailaddress.com', 'bg-white navbar-light', 'sidenav-dark', '1.0.0 build 1');
+INSERT INTO `settings` (`id`, `siteTitle`, `contactEmail`, `topBarTheme`, `sideBarTheme`, `VERSION`, filePath) VALUES
+(1, 'User management LITE', 'info@emailaddress.com', 'bg-white navbar-light', 'sidenav-dark', '1.0.0 build 1', 'null');
 COMMIT;

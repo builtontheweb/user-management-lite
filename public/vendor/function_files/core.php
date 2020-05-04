@@ -13,7 +13,7 @@ function getUserFullName($user_id){
 	$row = mysqli_fetch_assoc($result);
 	return $row['user_full_name'];
 }
-function editSiteSettings($siteTitle, $contactEmail, $topBarTheme, $sideBarTheme, $version /*, $yourExtraVariables */){
+function editSiteSettings($siteTitle, $contactEmail, $topBarTheme, $sideBarTheme, $version, $filePath /*, $yourExtraVariables */){
 	include 'dbInit.php';
 	//Escape the inputs
 	$siteTitle = mysqli_real_escape_string($conn, $siteTitle);
@@ -21,6 +21,7 @@ function editSiteSettings($siteTitle, $contactEmail, $topBarTheme, $sideBarTheme
 	$topBarTheme = mysqli_real_escape_string($conn, $topBarTheme);
 	$sideBarTheme = mysqli_real_escape_string($conn, $sideBarTheme);
 	$version = mysqli_real_escape_string($conn, $version);
+	$filePath = mysqli_real_escape_string($conn, $filePath);
 //	$additionalInput = mysqli_real_escape_string($conn, $siteTitle); - Should always be escaped
 	$sql = "UPDATE settings 
 				SET 
@@ -28,7 +29,8 @@ function editSiteSettings($siteTitle, $contactEmail, $topBarTheme, $sideBarTheme
 					contactEmail = '$contactEmail',
 					topBarTheme = '$topBarTheme',
 					sideBarTheme = '$sideBarTheme',
-					VERSION = '$version'
+					VERSION = '$version',
+					filePath = '$filePath'
 				WHERE
 					id = 1
 				";
@@ -39,4 +41,22 @@ function editSiteSettings($siteTitle, $contactEmail, $topBarTheme, $sideBarTheme
 		$return = 1;
 	}
 	return $return;
+}
+function siteLogo(){
+	include ("dbInit.php");
+	$sql = "SELECT * FROM settings";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+	if($row['filePath'] != 'null'){
+		$logoPath = 'uploads/'.$row['filePath'];
+		$logoPath = "<img src = '$logoPath' height = '40'>";
+		if(file_exists('uploads/'.$row['filePath'])){
+			$logoPath = $logoPath;
+		}else{
+			$logoPath = $row['siteTitle'];
+		}
+	}else{
+		$logoPath = $row['siteTitle'];
+	}
+	return $logoPath;
 }

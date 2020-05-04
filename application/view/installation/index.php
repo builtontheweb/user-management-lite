@@ -15,6 +15,12 @@
       <div class="card">
          <div class="card-header">What do I need to do?</div>
          <div class="card-body">
+			 <?php if(checkInstallation() == 1) { ?>
+			 	<p>System status: <span class = 'text-success'>Working & Installed</span></p>
+			 	<a href = 'dashboard' class = 'btn btn-success'>Return to dashboard</a>
+			 
+			 <?php } ?>
+<!--
             To use this system there is a few bits you need to do!
 			<ol>
 				<li>
@@ -65,6 +71,7 @@
 					</tr>
 				</tbody>
 			 </table>
+-->
          </div>
       </div>
    </div>

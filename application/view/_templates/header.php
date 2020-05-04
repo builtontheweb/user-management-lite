@@ -23,7 +23,7 @@ if (Session::userIsLoggedIn()){
 		<body class="nav-fixed">
 			<nav class="topnav navbar navbar-expand shadow <?= getSiteDetails('topBarTheme'); ?>" id="sidenavAccordion">
 				<a class="navbar-brand d-none d-sm-block" href="dashboard">
-					<?= getSiteDetails('siteTitle'); ?>
+					<?= siteLogo(); ?>
 				</a>
 				<button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#">
 					<i data-feather="menu"></i>

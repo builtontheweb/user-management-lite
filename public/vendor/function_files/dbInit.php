@@ -6,6 +6,8 @@ $dbName = Config::get("DB_NAME");
 $conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 
 if(!$conn){
-  die("Database Error");
+  $dbConn = false;
+}else{
+	$dbConn = true;
 }
 ?>

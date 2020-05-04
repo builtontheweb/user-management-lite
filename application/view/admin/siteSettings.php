@@ -2,7 +2,15 @@
 //Run function if a post variable is set - using an empty check (Because if POST is somehow set but an empty request - it could screw up the page)
 if(!empty($_POST['siteTitle'])){
 	//we only need to check one input as the form is pre validated - makes life easier - ensure to validate all inputs
-	$run = editSiteSettings($_POST['siteTitle'], $_POST['contactEmail'], $_POST['topBarTheme'], $_POST['sideBarTheme'], $_POST['version']);
+	
+	//Quick and dirty check to ensure that E_ALL errors doesn't throw an error to say filePath is NULL
+	if(empty($_POST['filePath'])){
+		$filePath = 'null';
+	}else{
+		$filePath = $_POST['filePath'];
+	}
+	
+	$run = editSiteSettings($_POST['siteTitle'], $_POST['contactEmail'], $_POST['topBarTheme'], $_POST['sideBarTheme'], $_POST['version'], $filePath);
 	if($run = 0){
 		$feedback = '<p class = "text-danger">We couldn\'t update your site settings</p>';
 	}else{
@@ -54,6 +62,10 @@ if ( window.history.replaceState ) {
 						<div class="form-group">
 							<label for="formGroupExampleInput">Site title (Displayed in the tab header, footer copyright and top nav bar)</label>
 							<input type="text" class="form-control" id="formGroupExampleInput" placeholder="e.g. My Website" name = 'siteTitle' value = '<?= getSiteDetails('siteTitle'); ?>'>
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput">Site Logo filename (Upload to <code>public > uploads</code>) Optional</label>
+							<input type="text" class="form-control" id="formGroupExampleInput" placeholder="e.g. logo.png" name = 'filePath' value = '<?= getSiteDetails('filePath'); ?>'>
 						</div>
 						<div class="form-group">
 							<label for="formGroupExampleInput2">Contact email (Displayed in the footer)</label>
