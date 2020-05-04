@@ -83,7 +83,7 @@ if (Session::userIsLoggedIn()){
 										</div>
 										<a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseUser">
 											<div class="nav-link-icon">
-												<i data-feather="package"></i>
+												<i data-feather="user"></i>
 											</div>User
 											<div class="sidenav-collapse-arrow">
 												<i class="fas fa-angle-down"></i>
@@ -101,7 +101,7 @@ if (Session::userIsLoggedIn()){
 										</div>
 										<a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse" data-target="#collapseProfile" aria-expanded="false" aria-controls="collapseProfile">
 											<div class="nav-link-icon">
-												<i data-feather="layout"></i>
+												<i data-feather="users"></i>
 											</div>Profile
 											<div class="sidenav-collapse-arrow">
 												<i class="fas fa-angle-down"></i>
@@ -114,7 +114,7 @@ if (Session::userIsLoggedIn()){
 										</div>
 										<a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse" data-target="#collapseError" aria-expanded="false" aria-controls="collapseError">
 											<div class="nav-link-icon">
-												<i data-feather="layout"></i>
+												<i data-feather="alert-triangle"></i>
 											</div>Error
 											<div class="sidenav-collapse-arrow">
 												<i class="fas fa-angle-down"></i>
@@ -122,14 +122,27 @@ if (Session::userIsLoggedIn()){
 										</a>
 										<div class="collapse" id="collapseError" data-parent="#accordionSidenav">
 											<nav class="sidenav-menu-nested nav accordion" id="accordionSidenavLayout">
-												<a class="nav-link" href="error/error404">404</a>
-												<a class="nav-link" href="error/error500">500</a>
+												<a class="nav-link" href="error/error404">404 Page</a>
+												<a class="nav-link" href="error/error500">500 Page</a>
+											</nav>
+										</div>
+										<a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse" data-target="#collapseNote" aria-expanded="false" aria-controls="collapseNote">
+											<div class="nav-link-icon">
+												<i data-feather="edit"></i>
+											</div>Note
+											<div class="sidenav-collapse-arrow">
+												<i class="fas fa-angle-down"></i>
+											</div>
+										</a>
+										<div class="collapse" id="collapseNote" data-parent="#accordionSidenav">
+											<nav class="sidenav-menu-nested nav accordion" id="accordionSidenavLayout">
+												<a class="nav-link" href="note/index">Index</a>
 											</nav>
 										</div>
 										<?php if(Session::get("user_account_type") == 7 ){ ?>
 										<a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse" data-target="#collapseAdmin" aria-expanded="false" aria-controls="collapseAdmin">
 											<div class="nav-link-icon">
-												<i data-feather="tool"></i>
+												<i data-feather="sliders"></i>
 											</div>Admin
 											<div class="sidenav-collapse-arrow">
 												<i class="fas fa-angle-down"></i>
@@ -143,14 +156,14 @@ if (Session::userIsLoggedIn()){
 										</div>
 										<?php } ?>
 										<div class="sidenav-menu-heading">Addons</div>
-										<a class="nav-link" href="charts.html">
+										<a class="nav-link" href="javascript:void(0)">
 											<div class="nav-link-icon">
-												<i data-feather="bar-chart"></i>
+												<i data-feather="help-circle"></i>
 											</div>Documentation
 										</a>
-										<a class="nav-link" href="tables.html">
+										<a class="nav-link" href="javascript:void(0)">
 											<div class="nav-link-icon">
-												<i data-feather="filter"></i>
+												<i data-feather="tool"></i>
 											</div>Extending
 										</a>
 									</div>
