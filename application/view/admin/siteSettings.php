@@ -12,15 +12,16 @@ if(!empty($_POST['siteTitle'])){
 	
 	$run = editSiteSettings($_POST['siteTitle'], $_POST['contactEmail'], $_POST['topBarTheme'], $_POST['sideBarTheme'], $_POST['version'], $filePath);
 	if($run = 0){
-		$feedback = '<p class = "text-danger">We couldn\'t update your site settings</p>';
+		Session::add('feedback_negative', Text::get('FEEDBACK_SITE_UPDATE_ERROR'));
 	}else{
-		$feedback = '<p class = "text-success">Site Settings Updated - Please refresh to see the changes</p>';
+		Session::add('feedback_positive', Text::get('FEEDBACK_SITE_UPDATE_SUCCESSFUL'));
 	}
 	unset ($_POST['siteTitle']);
 	unset ($_POST['contactEmail']);
 	unset ($_POST['topBarTheme']);
 	unset ($_POST['sideBarTheme']);
 	unset ($_POST['version']);
+	header("location: admin/siteSettings");
 }
 ?>
 <!-- The following script stops the page asking for form data to be resent (We've already destroyed the data - won't affect the form) -->
@@ -55,7 +56,6 @@ if ( window.history.replaceState ) {
 			<div class="card-header">Edit Site Settings Form - <code>&nbsp;When a POST variable is set page will run editSiteSettings() function</code>
 			</div>
 			<div class="card-body">
-				<?php if(isset($feedback)){ echo $feedback; } ?>
 				<p>The form below is automatically populated using <code>getSiteDetails(fieldName)</code> eg Site Title is: <code>getSiteDetails('siteTtile');</code>
 				</p>
 					<form method = 'post' action = '<?= Config::get("URL"); ?>admin/siteSettings'>

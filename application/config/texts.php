@@ -72,4 +72,7 @@ return array(
     "FEEDBACK_NOTE_DELETION_FAILED" => "Note deletion failed.",
     "FEEDBACK_COOKIE_INVALID" => "Your remember-me-cookie is invalid.",
     "FEEDBACK_COOKIE_LOGIN_SUCCESSFUL" => "You were successfully logged in via the remember-me-cookie.",
+	
+	"FEEDBACK_SITE_UPDATE_SUCCESSFUL" => "Site Settings Updated successfully - please refrsh the page to see your changes.",
+	"FEEDBACK_SITE_UPDATE_ERROR" => "We couldn't update your site settings",
 );
