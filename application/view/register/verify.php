@@ -18,7 +18,7 @@
 						</div>
 					</div>
 					<div class="card-footer text-center">
-						<div class="small"><a href="register-basic.html">Welcome aboard!</a>
+						<div class="small">Welcome aboard!
 						</div>
 					</div>
 				</div>
