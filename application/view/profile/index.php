@@ -7,7 +7,7 @@
                <div class="page-header-icon"><i data-feather="file"></i></div>
                <span>ProfileController/index</span>
             </h1>
-			 <div class="page-header-subtitle"><?php $this->renderFeedbackMessages(); ?></div>
+			 <div class="page-header-subtitle"></div>
 			 
          </div>
       </div>

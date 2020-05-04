@@ -9,7 +9,7 @@
 					<hr class="my-0"/>
 					<div class="card-body p-5">
 						<div class="text-center mb-4">
-							<?php $this->renderFeedbackMessages(); ?>
+							
 						</div>
 						<form method="post" action="<?php echo Config::get('URL'); ?>login/setNewPassword" name="new_password_form">
 							<input type='hidden' name='user_name' value='<?php echo $this->user_name; ?>' />

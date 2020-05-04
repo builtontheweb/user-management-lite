@@ -14,10 +14,15 @@
       <div class="card">
          <div class="card-header">What happens here?</div>
          <div class="card-body">
-            This is an area that's only visible for logged in users. Try to log out, an go to /dashboard/ again. You'll
+            <p>
+			This is an area that's only visible for logged in users. Try to log out, an go to /dashboard/ again. You'll
             be redirected to /index/ as you are not logged in. You can protect a whole section in your app within the
-            according controller by placing <i>Auth::handleLogin();</i> into the constructor.
+            according controller by placing <i>Auth::handleLogin();</i> into the constructor. 
+			</p>
+				<!-- Toast container -->
+				
          </div>
       </div>
    </div>
 </main>
+

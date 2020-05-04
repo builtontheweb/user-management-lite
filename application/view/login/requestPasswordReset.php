@@ -10,7 +10,7 @@
 					<div class="card-body p-5">
 						<div class="text-center small text-muted mb-4">Enter your email address below and we will send you a link to reset your password.</div>
 						<div class="text-center mb-4">
-							<?php $this->renderFeedbackMessages(); ?>
+							
 						</div>
 						<form method="post" action="<?php echo Config::get('URL'); ?>login/requestPasswordReset_action">
 							<div class="form-group"><label class="text-gray-600 small" for="emailExample">Email address</label>

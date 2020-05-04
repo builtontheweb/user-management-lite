@@ -21,6 +21,7 @@ if (Session::userIsLoggedIn()){
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
 		</head>
 		<body class="nav-fixed">
+		
 			<nav class="topnav navbar navbar-expand shadow <?= getSiteDetails('topBarTheme'); ?>" id="sidenavAccordion">
 				<a class="navbar-brand d-none d-sm-block" href="dashboard">
 					<?= siteLogo(); ?>

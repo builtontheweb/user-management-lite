@@ -8,7 +8,7 @@
 					</div>
 					<div class="card-body">
 						<p class = 'text-primary'>
-							<?php $this->renderFeedbackMessages(); ?>
+							
 						</p>
 						<div class='col-12 mt-2'>
 							<a href='<?= Config::get("URL"); ?>login' class='btn btn-success btn-block'>

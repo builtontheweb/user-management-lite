@@ -6,7 +6,7 @@
                <div class="page-header-icon"><i data-feather="file"></i></div>
                <span>NoteController/edit/:note_id</span>
             </h1>
-            <div class="page-header-subtitle"><?php $this->renderFeedbackMessages(); ?></div>
+            <div class="page-header-subtitle"></div>
          </div>
       </div>
    </div>

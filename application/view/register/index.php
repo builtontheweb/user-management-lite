@@ -6,14 +6,13 @@
 				<div class="card my-5">
 					<div class="card-body p-5 text-center">
 						<div class="h3 font-weight-light mb-3">Create an Account</div>
-						<div class="small text-muted mb-2">Sign in using...</div>
-						<a class="btn btn-icon btn-facebook mx-1" href="javascript:void(0);"><i class="fab fa-facebook-f fa-fw fa-sm"></i></a><a class="btn btn-icon btn-github mx-1" href="javascript:void(0);"><i class="fab fa-github fa-fw fa-sm"></i></a><a class="btn btn-icon btn-google mx-1" href="javascript:void(0);"><i class="fab fa-google fa-fw fa-sm"></i></a><a class="btn btn-icon btn-twitter mx-1" href="javascript:void(0);"><i class="fab fa-twitter fa-fw fa-sm"></i></a>
+						
 					</div>
 					<hr class="my-0"/>
 					<div class="card-body p-5">
 						
-						<div class="text-center small text-muted mb-4">...or enter your information below.</div>
-						<?php $this->renderFeedbackMessages(); ?>
+						<div class="text-center small text-muted mb-4">Please enter your information below.</div>
+						
 						<form method="post" action="<?php echo Config::get('URL'); ?>register/register_action">
 							<div class="form-row">
 								<div class="col-md-6">

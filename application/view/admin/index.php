@@ -7,7 +7,7 @@
                <span>AdminController/index</span>
             </h1>
             <div class="page-header-subtitle">This is only available to admin accounts (user_account_type = 7)</div>
-			 <div class="page-header-subtitle"><?php $this->renderFeedbackMessages(); ?></div>
+			 <div class="page-header-subtitle"></div>
 			 
          </div>
       </div>
