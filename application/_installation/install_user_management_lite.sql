@@ -30,7 +30,7 @@ INSERT INTO `users` (`user_id`, `session_id`, `user_name`, `user_password_hash`,
 `user_password_reset_timestamp`, `user_provider_type`) VALUES
   (1, NULL, 'demo', '$2y$10$OvprunjvKOOhM1h9bzMPs.vuwGIsOqZbw88rzSyGCTJTcE61g5WXi', 'demo@demo.com','Demo Admin', 1, 0, 7, 0, NULL, 1422205178, NULL, 1422209189, 0, NULL, NULL, NULL, NULL, 'DEFAULT'),
   (2, NULL, 'demo2', '$2y$10$OvprunjvKOOhM1h9bzMPs.vuwGIsOqZbw88rzSyGCTJTcE61g5WXi', 'demo2@demo.com','Demo User', 1, 0, 1, 0, NULL, 1422205178, NULL, 1422209189, 0, NULL, NULL, NULL, NULL, 'DEFAULT');
-  
+
 CREATE TABLE IF NOT EXISTS `notes` (
  `note_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
  `note_text` text NOT NULL,
@@ -45,10 +45,9 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `topBarTheme` varchar(55) NOT NULL DEFAULT 'bg-white navbar-dark',
   `sideBarTheme` varchar(55) NOT NULL DEFAULT 'sidenav-dark',
   `VERSION` varchar(15) NOT NULL,
-  `filePath` varchar(255) NOT NULL
+  `filePath` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `settings` (`id`, `siteTitle`, `contactEmail`, `topBarTheme`, `sideBarTheme`, `VERSION`, filePath) VALUES
 (1, 'User management LITE', 'info@emailaddress.com', 'bg-white navbar-light', 'sidenav-dark', '1.0.0 build 1', 'null');
-COMMIT;
